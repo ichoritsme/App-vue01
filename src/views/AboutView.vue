@@ -1,5 +1,5 @@
 <template>
   <div class="container">
-    <h1>Teeradon</h1>
+    <h1>Teeradon Suphapol</h1>
 </div>
 </template>

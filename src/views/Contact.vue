@@ -3,9 +3,10 @@
     <div class="text-primary">
         
         <h1 >Contact to Teeradon Suphapol</h1>
-        <h3>Tel.039-324-594</h3>    
+        <h3>Tel.039-324-594</h3>
+        <div class="mb-3">   
         <img  alt="chicken" src="../assets/chicken.jpg" width="300">
-
+          </div>
         
         <div class="container">
   <div class="row">

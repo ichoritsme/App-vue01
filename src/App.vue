@@ -25,6 +25,12 @@
         <li class="nav-item">
           <a class="nav-link" href="/employee">Employee</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/customer_crud">CustomerCrud</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/employee_crud">EmployeeCrud</a>
+        </li> 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Product
@@ -38,9 +44,6 @@
         </li>
          <li class="nav-item">
           <a class="nav-link" href="/show_product">ProductView</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2026 at 12:32 PM
+-- Generation Time: Feb 01, 2026 at 11:34 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -43,8 +43,7 @@ CREATE TABLE `customers` (
 INSERT INTO `customers` (`customer_id`, `firstName`, `lastName`, `phone`, `username`, `password`) VALUES
 (00000001, 'สมชาย', 'ใจดี', '0812345678', 'somchai', 'pass1234'),
 (00000002, 'วิภา', 'สุขสันต์', '0898765432', 'wipa', 'wipa2025'),
-(00000003, 'John', 'Doe', '0991122334', 'johnd', 'securepwd'),
-(00000005, 'ichor', 'itsme', '0969432019', 'ichoritsme', '$2y$10$gbYd4HcQy.8QLynJAJzPUu7uzmNc13NFCRQqvyF8OJw9LXJe2k4Sm');
+(00000003, 'John', 'Doe', '0991122334', 'johnd', 'securepwd');
 
 -- --------------------------------------------------------
 
@@ -69,10 +68,10 @@ INSERT INTO `employees` (`emp_id`, `full_name`, `department`, `salary`, `active`
 (0000000001, 'สมชาย ใจดี', 'IT', '35000.00', 1, '2026-01-18 10:24:47'),
 (0000000002, 'สมหญิง ดีงาม', 'บัญชี', '28000.00', 1, '2026-01-18 10:24:47'),
 (0000000003, 'อนันต์ สุขใจ', 'การตลาด', '25000.00', 0, '2026-01-18 10:24:47'),
-(0000000004, 'สุดา พรมดี', 'ทรัพยากรบุคคล', '32000.00', 1, '2026-01-18 10:24:47'),
-(0000000005, 'asdasd', 'adasd', '213123.00', 1, '2026-01-25 09:41:01'),
-(0000000006, 'asdasdsad', 'asdasdasd', '99999999.99', 1, '2026-01-25 09:41:28'),
-(0000000007, 'ichoritsme', 'IT', '50000.00', 1, '2026-01-25 09:45:13');
+(0000000004, 'สุดา พรมดี', 'ทรัพยากรบุคคล', '320002.00', 1, '2026-01-18 10:24:47'),
+(0000000009, 'asdsdsd', 'asdsd', '123123.00', 1, '2026-02-01 09:21:14'),
+(0000000010, 'asdsdsd', 'asdsd', '123123.00', 1, '2026-02-01 09:22:20'),
+(0000000011, 'asdas', 'asdsad', '232222.00', 1, '2026-02-01 09:28:27');
 
 -- --------------------------------------------------------
 
@@ -116,7 +115,8 @@ CREATE TABLE `type` (
 
 INSERT INTO `type` (`type_id`, `type_name`) VALUES
 (1, 'เครื่องเขียน'),
-(2, 'เครื่องใช้ไฟฟ้า');
+(2, 'เครื่องใช้ไฟฟ้า'),
+(4, 'เครื่องออกกำลังกาย');
 
 --
 -- Indexes for dumped tables
@@ -154,13 +154,13 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `customer_id` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `emp_id` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `emp_id` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -172,7 +172,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `type`
 --
 ALTER TABLE `type`
-  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสสินค้า', AUTO_INCREMENT=3;
+  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสสินค้า', AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

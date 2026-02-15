@@ -70,7 +70,12 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label">แผนก</label>
-                  <input v-model="editForm.department" type="text" class="form-control" required />
+                  <select v-model="editForm.department" class="form-select" required>
+                    <option value="">-- เลือกแผนก --</option>
+                    <option value="IT">IT</option>
+                    <option value="การตลาด">การตลาด</option>
+                    <option value="ทรัพยากรบุคคล">ทรัพยากรบุคคล</option>
+                  </select>
                 </div>
                 <div class="mb-3">
                   <label class="form-label">เงินเดือน (บาท)</label>

@@ -30,7 +30,11 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/employee_crud">EmployeeCrud</a>
-        </li> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/employeecrud">EmployeeCrud</a>
+        </li>
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Product
@@ -40,6 +44,7 @@
             <li><a class="dropdown-item" href="/product">Product</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/sh_product">Products</a></li>
+            <li><a class="dropdown-item" href="/productedit">EditProducts</a></li>
           </ul>
         </li>
          <li class="nav-item">

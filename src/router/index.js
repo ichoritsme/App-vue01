@@ -63,6 +63,17 @@ const routes = [
     name: 'employee_crud',
     component: () => import('../views/employee_crud.vue')
   }
+  ,
+  {
+    path: '/productedit',
+    name: 'productedit',
+    component: () => import('../views/product_edit.vue')
+  },
+  {
+    path: '/employeecrud',
+    name: 'employeecrud',
+    component: () => import('../views/Employeecrud.vue')
+  }
 ]
 
 const router = createRouter({

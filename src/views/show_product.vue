@@ -1,29 +1,31 @@
 <template>
   <div class="container my-5">
-    <!-- หัวข้อหลัก -->
     <h2 class="text-center mb-4">รายการสินค้า</h2>
 
-    <!-- ใช้ Bootstrap แบ่ง row -->
+    <div v-if="loading" class="text-center"><p>กำลังโหลดข้อมูล...</p></div>
+    <div v-if="error" class="alert alert-danger">{{ error }}</div>
+
     <div class="row">
-      <!-- วน loop แสดงสินค้าแต่ละตัว ด้วย v-for -->
-      <div class="col-md-3" v-for="data in Alldata" :key="data.id">
-
-        <!-- card แสดงข้อมูลสินค้า -->
+      <div class="col-md-3" v-for="data in Alldata" :key="data.product_id">
         <div class="card shadow-sm mb-4">
-          <!-- แสดงรูปสินค้า โดย path รูปมาจาก server -->
           <img
-             :src="data.image"
+            :src="'http://localhost/App-vue01/php_api/uploads/' + data.image"
             width="70%"
-            height="300"
+            height="340"
             class="card-img-top"
-            :alt="data.name"
-          >
-
-          <!-- เนื้อหาใน card -->
+            :alt="data.product_name"
+          />
           <div class="card-body text-center">
-            <h5 class="card-title">{{ data.product_name }}</h5> <!-- ชื่อสินค้า -->
-            <p class="card-text">{{ data.price }} บาท</p>       <!-- ราคาสินค้า -->
-            <button class="btn btn-primary">สั่งซื้อ</button>      <!-- ปุ่มสั่งซื้อ -->
+            <h5 class="card-title">{{ data.product_name }}</h5>
+            <p class="card-text text-muted small">{{ data.category_name }}</p>
+            <p class="card-text">{{ data.price }} บาท</p>
+            <router-link
+              :to="'/ProductDetail?id=' + data.product_id"
+              class="btn btn-sm btn-outline-primary w-100 mb-2"
+            >
+              ดูรายละเอียด
+            </router-link>
+            <button class="btn btn-primary w-100">สั่งซื้อ</button>
           </div>
         </div>
       </div>
@@ -41,14 +43,14 @@ export default {
     const loading = ref(true);
     const error = ref(null);
 
-    // ฟังก์ชันดึงข้อมูลจาก API
     const fetchData = async () => {
       try {
-        const response = await fetch("https://fakestoreapi.com/products");
+        const response = await fetch("http://localhost/app-vue01/php_api/api_product.php");
         if (!response.ok) {
           throw new Error("ไม่สามารถดึงข้อมูลได้");
         }
-        Alldata.value = await response.json();
+        const data = await response.json();
+        Alldata.value = data.success ? data.data : [];
       } catch (err) {
         error.value = err.message;
       } finally {

@@ -3,9 +3,9 @@
     <h2 class="mb-3">แสดงข้อมูลสินค้า</h2>
     
 
-     <div class="mb-3 text-start">
-      <a class="btn btn-primary" href="#" role="button">Add+</a>
-    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary" @click="openAddModal">Add+</button>
+      </div>
     <!-- ตารางแสดงข้อมูลลูกค้า -->
     <table class="table table-bordered table-striped">
       <thead class="table-dark">

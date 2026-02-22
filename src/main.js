@@ -12,3 +12,5 @@ window.bootstrap = bootstrap; // ✅ ผูกเข้ากับ global windo
 
 
 createApp(App).use(store).use(router).mount('#app')
+
+import 'bootstrap-icons/font/bootstrap-icons.css'
